@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>じゃんけん</title>
+    <link rel="stylesheet" href="../css/top.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- ゲームサイド -->
+    <div>
+        <h1 id="door">Janken Gear Solid</h1>
+        <div id="screen">
+            <!-- 第一画面 -->
+            <div id="first">
+                <div class="mission1">
+                    <p>decide your destiny...</p>
+                </div>
+                <div>
+                    <img src="../image/rock1.jpg" name="choise" id="rock" class="choise" alt="" onclick="choose(this)">
+                    <img src="../image/scissorse1.jpg" name="choise" id="scissorse" class="choise" alt="" onclick="choose(this)">
+                    <img src="../image/paper1.jpg" name="choise" id="paper" class="choise" alt="" onclick="choose(this)">
+                </div>
+
+            </div>
+            <!-- 第二画面 -->
+            <div id="secound">
+                <div class="name">
+                    <div><p class="ans_font" width="30%">your choise</p></div>
+                    <div><p class="ans_font space1" width="30%">enemy choise</p></div>
+                </div>
+                <div id="clean">
+                    <div id="call"></div>
+
+                </div>
+
+                <button id="reset" onclick="back()">continue?</button>
+            </div>
+
+        </div>
+    </div>
+
+    
+<script src="../js/top.js"></script>
+</body>
+</html>

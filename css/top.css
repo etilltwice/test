@@ -1,0 +1,60 @@
+body{
+    text-align:center;
+}
+
+#screen{
+    width:750px;
+    height:500px;
+    margin:0 auto;
+}
+/* （普通の）じゃんけんゲーム */
+/* 初期画面 */
+#first{
+    display:block;
+    border-radius:25px;
+    background:#000;
+}
+.mission1{
+    color:#f00;
+    font-size:40px;
+    margin:20px auto;
+}
+
+.choise{
+    width:30%;
+    height:auto;
+    margin:20px auto;
+}
+.choise:hover{
+    filter:mask(color=black);
+}
+
+/* 結果画面 */
+#secound{
+    display:none;
+    background-color:#00f;
+    border-radius:25px;
+    width:750px;
+    height:550px;
+}
+.name{
+    display:flex;
+    justify-content: center;
+}
+.ans_font{
+    color:#fff;
+    font-size:30px;
+}
+.space{
+    margin-left:200px;
+}
+.space1{
+    margin-left:250px;
+}
+#reset{
+    background-color:#000;
+    color:#ff0;
+    width: 100px;
+    height:40px;
+    font-size:15px;
+}

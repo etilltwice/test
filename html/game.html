@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/game.css">
+    <script type="text/javascript" src="../js/enchant.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <h1 id="door">じゃんけん　ぎあ　そりっど(おまけ)</h1>
+        <div id="wrapper">
+            <div id="screen">
+                <div id="start_scene">
+                    <div id="select_button">
+                        <button id="start_button" class="start_menu" onclick="game(1)">始めから</button>
+                        <button id="continue_button" class="start_menu" style="display:none" onclick="stageload()">続きから</button>
+                        <button id="discription_button" class="start_menu" onclick="td_move()">遊び方</button>
+                    </div>
+                    <div id="selectarea" style="display:none">
+                        <button id="select1" class="start_menu" style="display:none" onclick="game(1)">stage1</button>
+                        <button id="select2" class="start_menu" style="display:none" onclick="game(2)">stage2</button>
+                        <button id="select3" class="start_menu" style="display:none" onclick="game(3)">stage3</button>
+                        <button id="select4" class="start_menu" style="display:none" onclick="game(4)">stage4</button>
+                        <button id="select5" class="start_menu" style="display:none" onclick="game(5)">stage5</button>
+                        <button id="rabbit" class="start_menu" style="display:none" onclick="game(6)" color="#f00">rabbit rush!!</button>
+                    </div>
+                </div>
+    
+                <!-- 遊び方表記ウィンドウ -->
+                <div id="discription_scene">
+                    <div id="dis_list">
+                        <div>
+                                <p>1:移動及び選択変更は十字キーを使用してください</p>
+                                <p>2:Zキーで決定と発砲。Xキーで弾の種類を変えます</p>
+                                <p>3:グーが赤色。チョキが緑色。パーが青色。</p>
+                                <p>4:敵の色に勝つ色の球を当てると敵を倒せます</p>
+                                <p>5:敵や敵の出す弾に当たるとGAMEOVERです</p>
+                                <p>6:ゴールに到達すればステージクリアです</p>
+                        </div>
+                        <button id="reset_button" onclick="reset()">ゲームデータを消去する</button>
+                        <button id="discription_back" onclick="dt_move()">タイトルに戻る</button>
+                    </div>
+    
+                </div>
+    
+            </div>
+            
+    
+            <!-- 残弾ＵＩ -->
+            <div id="UI_wrapper">
+                <!-- 自機状態表記 -->
+                <div id ="sqear">
+                    <div id="ability">stand by...</div>
+                </div>
+                <!-- 弾丸ＵＩ -->
+                <div id="bullet_ui">
+                    <div class="bullet" id="redUI">
+                        <div>
+                            <p id="bullet_rock" class="rock">3</p>
+                        </div>
+                        <div>
+                            <p class="rock">ROCK</p>
+                        </div>
+                    </div>
+                    <div class="bullet" id="greenUI">
+                        <div>
+                            <p id="bullet_scissorse" class="scissorse">3</p>
+                        </div>
+                        <div>
+                            <p class="scissorse">SCISSORS</p>
+                        </div>
+                    </div>
+                    <div class="bullet" id="blueUI">
+                        <div>
+                            <p id="bullet_paper" class="paper">3</p>
+                        </div>
+                        <div>
+                            <p class="paper">PAPER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+    </div>
+
+
+    <script src="../js/game.js"></script>
+</body>
+</html>
